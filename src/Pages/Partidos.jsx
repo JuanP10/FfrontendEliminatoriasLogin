@@ -11,12 +11,11 @@ const Partidos = () => {
   const [marcadorVisitante, setMarcadorVisitante] = useState('');
 
   useEffect(() => {
-    // Hacer la solicitud al backend para obtener la lista de equipos
     fetch('http://localhost:8080/api/partidos')
       .then(response => response.json())
       .then(data => setEquipos(data))
       .catch(error => console.error('Error fetching equipos:', error));
-  }, []); // El segundo argumento [] asegura que se ejecute solo una vez al montar el componente
+  }, []); 
 
   return (
     <div style={styles.container}>
@@ -111,17 +110,18 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    background: '#f0f0f0', // Fondo gris claro
+    background: '#f0f0f0', //  gris claro
   },
   formContainer: {
-    background: '#ffffff', // Fondo blanco
+    background: '#ffffff', // blanco
     padding: '20px',
     borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', // Sombra suave
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', // Sombra 
     textAlign: 'center',
   },
 };
 
 export default Partidos;
+
 
 

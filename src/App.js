@@ -5,6 +5,7 @@ import Inicio from './Pages/Inicio';
 import Equipo from './Pages/Equipo';
 import Partidos from './Pages/Partidos';
 import Login from './Pages/Login';
+import EditarPartido from './Pages/EditarPartido';
 
 function App() {
   return (
@@ -31,6 +32,14 @@ function App() {
           element={
             <Layout>
               <Partidos />
+            </Layout>
+          }
+        />
+        <Route
+          path="/EditarPartido/:id"
+          element={
+            <Layout>
+              <EditarPartido />
             </Layout>
           }
         />
